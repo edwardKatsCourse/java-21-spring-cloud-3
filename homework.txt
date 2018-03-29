@@ -1,0 +1,29 @@
+The system should provied a possibility to:
+- create a new user
+- add records to statistics-service
+- show total statistics per user
+- show average sum spent during the period of time (like 2 last days)
+- show the most expensive purchase 
+- show user info 
+
+
+Requirements:
+All configurations from all servers should be stored in configuration files in config-service.
+Google how to prevent the server startup if the config-service is down! The system should now start if there is no config-service.
+
+gateway-service receives all the requests from Postman. 
+gateway-service has to validate the request body before process the requests within the system. Use
+hibernate-validator in order to validate the request body.
+
+account-service user should contain more info about the user, like his/her email address, date of birth and so on.
+Using Rest Repositories and Zuul (gateway-service), implement the user search by parameters, like,
+age, email address, last name.
+Search should be accesible via gateway-service (gateway-service may contain a map of methods, you 
+may call in account-service).
+
+No request, but user creation and user search should be processed without userId.
+
+There is an advanced part of the homework, including creation of another login-service and spring-security on gateway level. 
+Feel free to askin Skype
+
+Good luck!
